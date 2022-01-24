@@ -8,8 +8,8 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	background-color: rgb(255, 252, 238);
 	background-color: #282c34;
+	
 }
 
 .container {
@@ -27,14 +27,15 @@ body {
 
 .keypad {
 	display: grid;
-  grid-template-columns: repeat(4, 6rem);
-  grid-template-rows: minmax(7rem, auto) repeat(5, 6rem);
+	grid-template-columns: repeat(4, 6rem);
+	grid-template-rows: minmax(7rem, auto) repeat(5, 6rem);
 	margin: 5px;
 }
 
 form {
     grid-column: 1 / -1;
 }
+
 input {
 	height: 100px;
 	width: 90%;
@@ -55,28 +56,58 @@ button {
 	margin: 7px;
 	border: none;
 	border-radius: 5px;
-  border-radius: 50%;
+	border-radius: 50%;
 	cursor: pointer;
+	transition: background-color 0.25s, font-size 0.15s;
 
 }
 
-#equals {
-	grid-column: span 2;
+/* ========== BUTTONS ========== */
+
+button:hover {
+	background-color: #20232a;
+}
+button:active {
+	background-color: #181a1f;
+	font-size: 36px;
 }
 
 #clear, #equals {
-  border-radius: 3rem;
+	border-radius: 3rem;
 }
+
+/* ========== OPERATORS/FUNCTIONS ========== */
 
 .operator {
-  color: #38ef7d;
+	color: #38ef7d;
+}
+.operator:active {
+	font-size: 40px;
+}
+#clear, #backspace, .percent {
+	background-color: #454c5a;
+	transition: background-color 0.25s, font-size 0.15s;
+}
+#clear:hover, #backspace:hover, .percent:hover {
+	background-color: #373d48;
+}
+#clear:active, #backspace:active, .percent:active {
+	background-color: #292e36;
+	font-size: 32px;
 }
 
-#clear, #backspace, .percent {
-  background-color: #454c5a;
-}
+/* ========== EQUALS ========== */
 
 #equals {
+	grid-column: span 2;
 	background-color: #38ef7d;
 	font-size: 40px;
+	transition: background-color 0.25s, font-size 0.15s;
+}
+#equals:hover {
+	background-color: #11E25E;
+}
+#equals:active {
+	background-color: #00B541;
+	font-size: 48px;
 }
