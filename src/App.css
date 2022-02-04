@@ -58,7 +58,7 @@ button {
 	border-radius: 5px;
 	border-radius: 50%;
 	cursor: pointer;
-	transition: background-color 0.25s, font-size 0.15s;
+	transition: background-color 0.25s;
 
 }
 
@@ -69,7 +69,6 @@ button:hover {
 }
 button:active {
 	background-color: #181a1f;
-	font-size: 36px;
 }
 
 #clear, #equals {
@@ -81,19 +80,15 @@ button:active {
 .operator {
 	color: #38ef7d;
 }
-.operator:active {
-	font-size: 40px;
-}
 #clear, #backspace, .percent {
 	background-color: #454c5a;
-	transition: background-color 0.25s, font-size 0.15s;
+	transition: background-color 0.25s;
 }
 #clear:hover, #backspace:hover, .percent:hover {
 	background-color: #373d48;
 }
 #clear:active, #backspace:active, .percent:active {
 	background-color: #292e36;
-	font-size: 32px;
 }
 
 /* ========== EQUALS ========== */
@@ -102,12 +97,11 @@ button:active {
 	grid-column: span 2;
 	background-color: #38ef7d;
 	font-size: 40px;
-	transition: background-color 0.25s, font-size 0.15s;
+	transition: background-color 0.25s;
 }
 #equals:hover {
 	background-color: #11E25E;
 }
 #equals:active {
 	background-color: #00B541;
-	font-size: 48px;
 }
